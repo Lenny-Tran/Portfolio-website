@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Portfolio</title>
+    <link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/footer.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Welcome to My Portfolio</h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="content">
+            <section>
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="project-item">
+                        <h3>Project 1</h3>
+                        <p>A short description of my first project.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 2</h3>
+                        <p>A short description of my second project.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                    <div class="project-item">
+                        <h3>Project 3</h3>
+                        <p>A short description of my third project.</p>
+                        <a href="#">View Project</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Include the footer -->
+        {% include 'baseapp/footer.html' %}
+    </div>
+</body>
+</html>
